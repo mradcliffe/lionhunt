@@ -1,0 +1,7 @@
+[
+    {
+        "from": "Acceptance Criteria",
+        "to": "Acceptance Criteria",
+        "type": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+    }
+]
