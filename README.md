@@ -5,8 +5,10 @@ lionhunt is a Workfront to JIRA export tool written in node.js that allows to ex
 This includes
 
 * Tasks
-* Task updates (comments only)
-* Task documents as external URLs
+* Task updates
+   * Task transitions are added as issue comments.
+* Task documents
+   * Task documents are added into a table in the issue description because attached links become "secure links", which are useless.
 
 ## Usage
 
@@ -44,6 +46,10 @@ An optional Workfront project to restrict to.
 
 A required Worfkront team
 
+### all-teams
+
+Optionally include all teams when using the `project` team option. This still requires the `team` option.
+
 #### mapping
 
 A JSON file with an array of custom field mapping objects e.g.
@@ -70,13 +76,16 @@ Only hunt for open tasks.
 
 Use verbose output. This is useful when running interactively, but should be disabled when providing all options on the command line.
 
+### output
+
+Provide an output file name to wirte to. By default, output is printed to `STDOUT`.
+
 
 ## TODO
 
-* Add `output` option to output to a file and output to STDOUT by default if not set.
 * Add `interactive` option and prompt for user name and password there, and disable auto-prompt. Error out instead.
-
-* Support nested comments. This is a pain in the butt to do and increases execution time/explodes the number of requests needed.
+* Support nested comments.
+   * This is a pain in the butt to do and increases execution time/explodes the number of requests needed.
 
 ### Probably won't do
 

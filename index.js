@@ -11,7 +11,6 @@ var optionsParse = require("./lib/options");
 var optionsParser = new optionsParse();
 var options = {domain: null, team: null, project: null};
 var prompts = [];
-var domainValue, teamValue;
 
 program
     .version("0.1.0")
@@ -20,7 +19,9 @@ program
     .option("-p, --password [password]", "Workfront password.")
     .option("-P, --project [project]", "Workfront project name.")
     .option("-t, --team [team]", "Workfront team name.")
+    .option("-a, --all-teams", "Get tasks for all teams associated with a Workfront project. Must be used with --project option above.")
     .option("-m, --mapping [file]", "A mapping file containing an array of objects.")
+    .option("-o, --output [file]", "Specify an optional output file. If not provided, STDOUT is used.")
     .option("-O, --open", "Include only open tasks.")
     .option("-c, --created [date]", "Only hunt for tasks created after a valid ISO date e.g. 2016-01-01")
     .option("-v, --verbose", "Provide verbose output for debugging.")
