@@ -78,12 +78,14 @@ Use verbose output. This is useful when running interactively, but should be dis
 
 ### output
 
-Provide an output file name to wirte to. By default, output is printed to `STDOUT`.
+Provide an output file name to write to. By default, output is printed to `STDOUT`.
 
+### interactive
+
+Run in interactive mode to prompt for username and password. Otherwise, username and password are required options.
 
 ## TODO
 
-* Add `interactive` option and prompt for user name and password there, and disable auto-prompt. Error out instead.
 * Support nested comments.
    * This is a pain in the butt to do and increases execution time/explodes the number of requests needed.
 
