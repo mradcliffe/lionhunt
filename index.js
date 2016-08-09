@@ -95,19 +95,18 @@ inquirer
         hunter.login(options.username, options.password)
             .then(hunter.stalk)
             .then(hunter.feast)
-            .then(function() {
-                return hunter.api.logout();
-            })
-            .catch(function (error) {
+            .catch(function(error) {
                 if (options.verbose) {
                     if (error.stack) {
                         process.stderr.write(error.stack);
                     } else {
-                        process.stderr.write(util.inspcet(error));
+                        process.stderr.write(util.inspect(error));
                     }
                 } else {
                     process.stderr.write(util.inspect(error));
                 }
+            })
+            .finally(function() {
                 return hunter.api.logout();
             });
     });
