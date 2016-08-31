@@ -12,7 +12,6 @@
   "bin": {
     "lionhunt": "index.js"
   },
-  "private": true,
   "dependencies": {
     "bluebird": "^3.3.5",
     "commander": "^2.9.0",
