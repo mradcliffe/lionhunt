@@ -9,6 +9,10 @@
   "author": "Matthew Radcliffe <mradcliffe@softpixel.com>",
   "license": "MIT",
   "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mradcliffe/lionhunt.git"
+  },
   "bin": {
     "lionhunt": "index.js"
   },
