@@ -4,7 +4,6 @@
 
 var _ = require("lodash");
 var util = require("util");
-var process = require("process");
 var inquirer = require("inquirer");
 var program = require("commander");
 var lionhunt = require("./lib/lionhunt");
