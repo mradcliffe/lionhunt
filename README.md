@@ -22,7 +22,7 @@ This will output to a file `export.json`.
 
 #### domain
 
-The Workfront on-demand *domain* e.g. `domain.attask-ondemand.com`
+The Workfront on-demand *domain*, which is the sub-domain of the Workfront On-Demand domain name e.g. **domain**.attask-ondemand.com
 
 #### team
 
